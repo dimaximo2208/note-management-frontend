@@ -53,7 +53,7 @@ const Home = () => {
             <NotesTable
                 notes={notes}
             />
-            <Button onClick={handleAddNoteClick}>Add note</Button>
+            <Button className='ms-3' onClick={handleAddNoteClick}>Add note</Button>
         </>
     )
 }

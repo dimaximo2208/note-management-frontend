@@ -1,11 +1,5 @@
-import { useEffect } from "react";
 import { Note } from "../models/Note";
 import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
 import NoteCard from "./NoteCard";
 
 interface NotesTableProps {
@@ -13,10 +7,9 @@ interface NotesTableProps {
 }
 
 const NotesTable = (props: NotesTableProps) => {
-    console.log(props.notes)
     return (
         <>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} className="m-1">
                 {props.notes && props.notes.length > 0 &&
                     props.notes.map(note =>
                         <>
@@ -26,8 +19,8 @@ const NotesTable = (props: NotesTableProps) => {
                         </>
                     )
                 }
-                {props.notes && props.notes.length == 0 &&
-                    <h5>
+                {props.notes && props.notes.length === 0 &&
+                    <h5 className="ms-4 mt-2">
                         Notes not found, click the button below to add one
                     </h5>
                 }
